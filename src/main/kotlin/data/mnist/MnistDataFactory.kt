@@ -14,6 +14,7 @@ object MnistDataFactory {
         val labels = MnistReader.getLabelsAsVector(LABEL_FILE)
         for (i in 0 until labels.size) {
             list.add(ImageSample(28, 28, images[i], labels[i]))
+            println("sampling...")
         }
         return list
     }

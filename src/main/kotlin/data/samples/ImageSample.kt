@@ -34,8 +34,6 @@ class ImageSample(val width: Int,
         val image = app.createImage(width, height, PConstants.RGB)
         image.loadPixels()
         for (i in image.pixels.indices) {
-            println(image.pixels.count())
-            println(inputVector.count())
             image.pixels[i] = app.color(inputVector[i].toFloat())
         }
         image.updatePixels()
