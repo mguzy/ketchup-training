@@ -1,11 +1,10 @@
-import data.mnist.MnistDataFactory
-import mnist.MnistReader
-import net.NetBuilder
-import net.NeuralNet
-import java.util.concurrent.TimeUnit
+import layer.InputLayer
+import layer.Layer
 
 fun main(args: Array<String>) {
-    ProcessingTest.run()
-
+    //ProcessingTest.run()
+val input = InputLayer(784)
+    var output = Layer(10, input)
+    print(output.weightedValue())
 }
 
